@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.ticket-container {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#time {
+    font-size: 24px;
+}
+
+#date {
+    font-size: 24px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.ticket-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+}
+
+.gps-coordinates {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.red-text {
+    color: red;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-row {
+    display: flex;
+    width: 100%;
+}
+
+.table-cell {
+    flex: 1;
+    border: 1px solid #000;
+    padding: 8px;
+    position: relative;
+}
+
+.table-cell label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.table-cell input[type="text"],
+.table-cell input[type="date"],
+.table-cell input[type="time"],
+.table-cell input[type="number"],
+.table-cell input[type="email"],
+.table-cell textarea {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+}
+
+/* Specific styling for smaller text inputs */
+#driver-name,
+#trucking-company,
+#work-ticket,
+#field,
+#operator,
+#lease-name,
+#county,
+#rrc {
+    font-size: 16px;
+}
+
+.table-cell textarea {
+    resize: vertical;
+    min-height: 90px;
+    font-size: 16px;
+}
+
+/* Specific styling for Total BBLS field */
+.bbls input[type="number"] {
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bbls label {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.time-container {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 10px;
+}
+
+.am-pm {
+    display: flex;
+    gap: 15px;
+}
+
+.am-pm label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.checkbox-section {
+    flex: 2;
+}
+
+.checkbox-grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-column label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+}
+
+.signature-cell {
+    width: 100%;
+}
+
+#signature-pad {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    touch-action: none;
+}
+
+#clear-signature {
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.warning {
+    font-size: 12px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .table-row {
+        flex-direction: column;
+    }
+
+    .table-cell {
+        width: 100%;
+    }
+
+    .checkbox-section {
+        flex: 1;
+    }
+}

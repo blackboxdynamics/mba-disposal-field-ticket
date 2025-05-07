@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBA Disposal Ticket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="ticket-container">
+        <div class="header">
+            <h1>MBA DISPOSAL, LLC</h1>
+            <p class="address">6701 N. Broadway Ext., Suite 310</p>
+            <p class="address">Oklahoma City, Oklahoma 73116</p>
+            <div class="ticket-number">No. <span class="red-text">461099</span></div>
+            <div class="gps-coordinates">
+                <span id="coordinates-display"></span>
+            </div>
+        </div>
+
+        <div class="form-table">
+            <!-- Row 1 -->
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="table-cell">
+                    <label>Time at Disposal</label>
+                    <div class="time-container">
+                        <input type="time" id="time" name="time">
+                    </div>
+                </div>
+                <div class="table-cell">
+                    <label for="driver-name">Driver's Name</label>
+                    <input type="text" id="driver-name" name="driver-name">
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="trucking-company">Trucking Company</label>
+                    <input type="text" id="trucking-company" name="trucking-company">
+                </div>
+                <div class="table-cell">
+                    <label for="truck">Truck #</label>
+                    <input type="text" id="truck" name="truck">
+                </div>
+                <div class="table-cell">
+                    <label for="work-ticket">Trucking Co. Work Ticket #</label>
+                    <input type="text" id="work-ticket" name="work-ticket">
+                </div>
+                <div class="table-cell">
+                    <label for="field">Field</label>
+                    <input type="text" id="field" name="field">
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="operator">Operator</label>
+                    <input type="text" id="operator" name="operator">
+                </div>
+                <div class="table-cell">
+                    <label for="lease-name">Lease Name</label>
+                    <input type="text" id="lease-name" name="lease-name">
+                </div>
+                <div class="table-cell">
+                    <label for="county">County</label>
+                    <input type="text" id="county" name="county">
+                </div>
+                <div class="table-cell">
+                    <label for="rrc">RRC #</label>
+                    <input type="text" id="rrc" name="rrc">
+                </div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="table-row">
+                <div class="table-cell bbls">
+                    <label for="total-bbls">Total BBLS.</label>
+                    <input type="number" id="total-bbls" name="total-bbls">
+                </div>
+                <div class="table-cell checkbox-section">
+                    <div class="checkbox-grid">
+                        <div class="checkbox-column">
+                            <label><input type="checkbox" name="salt-water"> Salt Water</label>
+                            <label><input type="checkbox" name="flow-back"> Flow Back</label>
+                            <label><input type="checkbox" name="other"> Other</label>
+                        </div>
+                        <div class="checkbox-column">
+                            <label><input type="checkbox" name="stock-tank"> Stock Tank</label>
+                            <label><input type="checkbox" name="frac-tank"> Frac Tank</label>
+                            <label><input type="checkbox" name="pit"> Pit</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 5 - Comments and Email -->
+            <div class="table-row">
+                <div class="table-cell">
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+                <div class="table-cell">
+                    <label for="email-receipt">Email for Receipt</label>
+                    <input type="email" id="email-receipt" name="email-receipt" placeholder="Enter email address">
+                </div>
+            </div>
+
+            <!-- Row 6 - Signature -->
+            <div class="table-row">
+                <div class="table-cell signature-cell">
+                    <label>Driver's Signature:</label>
+                    <canvas id="signature-pad"></canvas>
+                    <button id="clear-signature" type="button">Clear Signature</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="thank-you">Thanks. We Appreciate Your business!</p>
+            <p class="warning">Drivers must obey all warning signs.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
