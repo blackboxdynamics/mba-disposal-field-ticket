@@ -1,2 +1,2 @@
 # mba-disposal-field-ticket
-Ticketing site for disposal injection site.
+Ticketing app for disposal injection site.
